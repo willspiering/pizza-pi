@@ -139,7 +139,7 @@ export default function Calculator(props: CalculatorProps) {
             Save
           </button>
           <button className="view-list-btn" onClick={props.toggleList}>
-            View
+            List
           </button>
         </div>
       </div>
