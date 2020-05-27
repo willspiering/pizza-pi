@@ -51,21 +51,21 @@ function ListItem(props: ListItemProps) {
 			<div className="main-stats">
 				<div className="value-wrapper">
 					<div className="label">Price Per Sq Inch</div>
-					<div className="value">${props.pricePerSqIn}</div>
+					<div className="value">${props.pricePerSqIn.toFixed(2)}</div>
 				</div>
 				<div className="value-wrapper">
 					<div className="label">Price per Slice</div>
-					<div className="value">${props.pricePerSlice}</div>
+					<div className="value">${props.pricePerSlice.toFixed(2)}</div>
 				</div>
 			</div>
 			<ul className="secondary-stats">
 				<li className="value-wrapper">
 					<div className="label">Total Cost:</div>
-					<div className="value">${props.totalPrice}</div>
+					<div className="value">${props.totalPrice.toFixed(2)}</div>
 				</li>
 				<li className="value-wrapper">
 					<div className="label">Unit Price:</div>
-					<div className="value">${props.unitPrice}</div>
+					<div className="value">${props.unitPrice.toFixed(2)}</div>
 				</li>
 				<li className="value-wrapper">
 					<div className="label">Quantiy:</div>
