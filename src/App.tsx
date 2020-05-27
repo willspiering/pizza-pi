@@ -20,18 +20,18 @@ interface PizzaBuildState {
 
 export default function App() {
   const [showList, setShowList] = React.useState(false);
-  const [pizzaList, setPizzaList] = React.useState([]);
+  const [pizzaList, setPizzaList] = React.useState<any[]>([]);
   console.log("PizzaList: ", pizzaList);
   const width = useViewport();
   // TODO: setup good mobile breakpoint
   const mobile = 600;
 
-  let addPizzaBuild = newPizzaBuild => {
-    setPizzaList(pizzaList => pizzaList.concat(newPizzaBuild));
+  let addPizzaBuild = (newPizzaBuild) => {
+    setPizzaList((pizzaList) => pizzaList.concat(newPizzaBuild));
   };
 
-  let removePizzaBuild = id => {
-    setPizzaList(pizzaList => pizzaList.filter(t => t.id !== id));
+  let removePizzaBuild = (id) => {
+    setPizzaList((pizzaList) => pizzaList.filter((t) => t.id !== id));
   };
 
   let toggleList = () => setShowList(!showList);

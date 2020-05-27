@@ -3,7 +3,7 @@ import CurrentResults from "./CurrentResults";
 
 // Pizza Utilities
 //area of 1 pizza in sq.in
-const areaOfPizza = diameter => {
+const areaOfPizza = (diameter) => {
   let radius = diameter / 2;
   let pi = 3.14;
   let area = pi * (radius * radius);
@@ -16,46 +16,41 @@ const totalPizzaArea = (size, numberOfPizzas) => {
 };
 //price per sq inch
 const pricePerSqIn = (unitPrice, totalPizzaArea, numberOfPizzas) => {
-  return ((unitPrice * numberOfPizzas) / totalPizzaArea).toFixed(2);
+  return parseFloat(((unitPrice * numberOfPizzas) / totalPizzaArea).toFixed(2));
 };
 //price per slice
 const pricePerSlice = (unitPrice, slicesPerPizza) => {
-  return (unitPrice / slicesPerPizza).toFixed(2);
+  return parseFloat((unitPrice / slicesPerPizza).toFixed(2));
 };
 // total cost
 const totalPrice = (unitPrice, numberOfPizzas) => {
-  return (unitPrice * numberOfPizzas).toFixed(2);
+  return parseFloat((unitPrice * numberOfPizzas).toFixed(2));
 };
 
-export default function Calculator(props: CalculatorProps) {
+export default function Calculator(props) {
   const [pizzaSize, setPizzaSize] = React.useState(18);
   const [pizzaPrice, setPizzaPrice] = React.useState(0);
   const [pizzaQuantity, setPizzaQuantity] = React.useState(1);
   const [pizzaSlices, setPizzaSlices] = React.useState(6);
 
-  const handleSize = e => {
+  const handleSize = (e) => {
     setPizzaSize(e);
   };
 
-  const handlePrice = e => {
+  const handlePrice = (e) => {
     setPizzaPrice(e);
   };
 
-  const handleQuantity = e => {
+  const handleQuantity = (e) => {
     setPizzaQuantity(e);
   };
 
-  const handleSlices = e => {
+  const handleSlices = (e) => {
     setPizzaSlices(e);
   };
 
   function generateId() {
-    return (
-      "_" +
-      Math.random()
-        .toString(36)
-        .substr(2, 9)
-    );
+    return "_" + Math.random().toString(36).substr(2, 9);
   }
 
   //resetForm
@@ -76,7 +71,7 @@ export default function Calculator(props: CalculatorProps) {
         pizzaQuantity
       ),
       pricePerSlice: pricePerSlice(pizzaPrice, pizzaSlices),
-      totalPrice: totalPrice(pizzaPrice, pizzaQuantity)
+      totalPrice: totalPrice(pizzaPrice, pizzaQuantity),
     };
     props.updateList(newBuild);
   };
@@ -100,7 +95,7 @@ export default function Calculator(props: CalculatorProps) {
             name="pizza-size"
             id="pizza-size"
             value={pizzaSize}
-            onChange={e => handleSize(e.target.value)}
+            onChange={(e) => handleSize(e.target.value)}
           />
         </div>
         <div className="form-item">
@@ -110,7 +105,7 @@ export default function Calculator(props: CalculatorProps) {
             name="price-per-unit"
             id="price-per-unit"
             value={pizzaPrice}
-            onChange={e => handlePrice(e.target.value)}
+            onChange={(e) => handlePrice(e.target.value)}
           />
         </div>
         <div className="form-item">
@@ -120,7 +115,7 @@ export default function Calculator(props: CalculatorProps) {
             name="quantity"
             id="quantity"
             value={pizzaQuantity}
-            onChange={e => handleQuantity(e.target.value)}
+            onChange={(e) => handleQuantity(e.target.value)}
           />
         </div>
         <div className="form-item">
@@ -131,7 +126,7 @@ export default function Calculator(props: CalculatorProps) {
             id="number-slices"
             value={pizzaSlices}
             // onChange={e => handleSlices(e.target.value)}
-            onChange={e => handleSlices(e.target.value)}
+            onChange={(e) => handleSlices(e.target.value)}
           />
         </div>
         <div className="footer">
