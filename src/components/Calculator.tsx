@@ -16,15 +16,15 @@ const totalPizzaArea = (size, numberOfPizzas) => {
 };
 //price per sq inch
 const pricePerSqIn = (unitPrice, totalPizzaArea, numberOfPizzas) => {
-	return parseFloat(((unitPrice * numberOfPizzas) / totalPizzaArea).toFixed(2));
+	return (unitPrice * numberOfPizzas) / totalPizzaArea;
 };
 //price per slice
 const pricePerSlice = (unitPrice, slicesPerPizza) => {
-	return parseFloat((unitPrice / slicesPerPizza).toFixed(2));
+	return unitPrice / slicesPerPizza;
 };
 // total cost
 const totalPrice = (unitPrice, numberOfPizzas) => {
-	return parseFloat((unitPrice * numberOfPizzas).toFixed(2));
+	return unitPrice * numberOfPizzas;
 };
 
 export default function Calculator(props) {
