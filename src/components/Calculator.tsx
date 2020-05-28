@@ -34,19 +34,19 @@ export default function Calculator(props) {
   const [pizzaSlices, setPizzaSlices] = React.useState(6);
 
   const handleSize = e => {
-    setPizzaSize(Number(e));
+    setPizzaSize(e);
   };
 
   const handlePrice = e => {
-    setPizzaPrice(Number(e));
+    setPizzaPrice(e);
   };
 
   const handleQuantity = e => {
-    setPizzaQuantity(Number(e));
+    setPizzaQuantity(e);
   };
 
   const handleSlices = e => {
-    setPizzaSlices(Number(e));
+    setPizzaSlices(e);
   };
 
   function generateId() {
@@ -64,10 +64,10 @@ export default function Calculator(props) {
     console.log("Generate ID: ", generateId());
     let newBuild = {
       id: generateId(),
-      size: pizzaSize,
-      unitPrice: pizzaPrice,
-      numberOfPizzas: pizzaQuantity,
-      slices: pizzaSlices,
+      size: Number(pizzaSize),
+      unitPrice: Number(pizzaPrice),
+      numberOfPizzas: Number(pizzaQuantity),
+      slices: Number(pizzaSlices),
       areaOfPizza: areaOfPizza(pizzaSize),
       totalArea: totalPizzaArea(pizzaSize, pizzaQuantity),
       pricePerSqIn: pricePerSqIn(
