@@ -5,8 +5,12 @@ export default function usePersistedState<T>(defaultValue: T, key: string, stora
 		try {
 			let cachedValue = storage.getItem(key);
 			if (!cachedValue) return defaultValue;
-			if (typeof cachedValue === "string") return cachedValue;
-			return JSON.parse(cachedValue);
+			try {
+				return JSON.parse(cachedValue);
+			} catch (err) {
+				// Unable to parse the JSON, must be a string?
+				return cachedValue;
+			}
 		} catch (err) {
 			return defaultValue;
 		}
