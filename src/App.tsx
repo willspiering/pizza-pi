@@ -21,7 +21,7 @@ interface PizzaBuildState {
 
 export default function App() {
 	const [showList, setShowList] = React.useState(false);
-	const [pizzaList, setPizzaList] = usePersistedState([], "PizzaList");
+	const [pizzaList, setPizzaList] = usePersistedState<PizzaBuildState[]>([], "PizzaList");
 	console.log("PizzaList: ", pizzaList);
 	const width = useViewport();
 	// TODO: setup good mobile breakpoint
