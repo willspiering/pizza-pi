@@ -1,25 +1,110 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"short_name": "Pizza Pi",
+	"name": "Pizza Pi",
+	"icons": [
+		{
+			"src": "/images/98e06ade-85e8-fc02-8459-bcf8be777664.webPlatform.png",
+			"sizes": "44x44",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/4f09ac3b-8a9c-4b00-d140-64eef0739686.webPlatform.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/703fd502-33ef-eaea-fbd9-0817e69b657e.webPlatform.png",
+			"sizes": "1240x600",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/d0ef9f8d-3dfb-a72c-8bfa-176642330450.webPlatform.png",
+			"sizes": "300x300",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/b22ff6aa-152c-899b-be97-83fa5fa927df.webPlatform.png",
+			"sizes": "150x150",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/5b1766ff-1dd7-5bc4-0389-c652d666eae6.webPlatform.png",
+			"sizes": "88x88",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/e8065502-6a36-9ff6-62fd-a6ab9828df88.webPlatform.png",
+			"sizes": "24x24",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/74f1ede1-27b9-5efb-3af2-5cf763f57e8a.webPlatform.png",
+			"sizes": "50x50",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/3e1b3498-cd8e-f0ce-e8ef-619af761687d.webPlatform.png",
+			"sizes": "620x300",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/c0d9383f-d518-fd8b-3dbc-a1b3b01c663f.webPlatform.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/2979e5d8-d485-d974-6c39-f7150ab04aad.webPlatform.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/09a32fd2-5896-b2d1-ee86-6cedbd46a753.webPlatform.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/b6bb9ff0-42c1-3ba4-bae4-08fca195750f.webPlatform.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/acbe1a45-fcdc-c633-3239-a77940762057.webPlatform.png",
+			"sizes": "36x36",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/667c7c81-d1d9-8c8d-411e-2ec03564b409.webPlatform.png",
+			"sizes": "1024x1024",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/20c9d61f-f570-62de-5673-312981a768b4.webPlatform.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/50c3fb75-2cc4-82a0-b664-e52be13bac20.webPlatform.png",
+			"sizes": "152x152",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/0885cc7c-cb1b-aa35-7cce-4f2081cf4bb7.webPlatform.png",
+			"sizes": "120x120",
+			"type": "image/png"
+		},
+		{
+			"src": "/images/d414a2c9-ff35-1d68-bc2a-0c2a7cfe8ab4.webPlatform.png",
+			"sizes": "76x76",
+			"type": "image/png"
+		}
+	],
+	"start_url": "https://pizza-pi.netlify.app/",
+	"display": "standalone",
+	"theme_color": "#337357",
+	"background_color": "#171a21",
+	"url": "https://pizza-pi.netlify.app/",
+	"lang": "English",
+	"screenshots": [],
+	"description": "Get the most dough for your dough! Calculate price per slice, per square inch and compare your builds to find the best deals.",
+	"orientation": "portrait"
 }
