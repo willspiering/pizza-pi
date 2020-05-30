@@ -1,10 +1,12 @@
 import * as React from "react";
+import logo from "../assets/pizza-pi-logo.png";
 import styled from "styled-components";
 
 export default function ListSection(props) {
 	const showPlaceHolder = () => {
 		return (
 			<StyledPlaceholder>
+				<img src={logo} />
 				<h3>Save your pizza builds here</h3>
 			</StyledPlaceholder>
 		);
@@ -203,12 +205,20 @@ const StyledList = styled.div`
 `;
 
 const StyledPlaceholder = styled.div`
-	color: #171a21ff;
+	color: white;
 	font-weight: bold;
 	text-align: center;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	height: 100%;
 	align-items: center;
+	background: #00000030;
+	border-radius: 15px;
+	img {
+		max-width: 50%;
+		height: auto;
+	}
 	h3 {
 		width: 100%;
 	}
