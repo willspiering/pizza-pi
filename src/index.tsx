@@ -4,6 +4,14 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+declare global {
+	namespace JSX {
+		interface IntrinsicElements {
+			"pwa-install": any;
+		}
+	}
+}
+
 ReactDOM.render(
 	<React.StrictMode>
 		<App />
