@@ -22,5 +22,14 @@ body {
 }
 
 pwa-install::part(openButton) {
-	background: grey;
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	border-radius: 5px;
+	background: transparent;
+	border: 1px solid white;
+}
+pwa-install::part(openButton):hover {
+	background: white;
+	color: #337357;
 }

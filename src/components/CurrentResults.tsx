@@ -22,7 +22,7 @@ export default function CurrentResults(props: CurrentResultsProps) {
 }
 
 function InstallBtn() {
-	return <pwa-install showopen={true}></pwa-install>;
+	return <pwa-install />;
 }
 
 export interface CurrentResultsProps {
