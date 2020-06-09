@@ -1,8 +1,10 @@
 import * as React from "react";
+import "@pwabuilder/pwainstall";
 
 export default function CurrentResults(props: CurrentResultsProps) {
 	return (
 		<div className="current-wrapper">
+			<InstallBtn />
 			<div className="current-value">
 				<div className="label">Price Per Sq Inch</div>
 				<div className="result">${props.pricePerSqIn.toFixed(2)}</div>
@@ -17,6 +19,10 @@ export default function CurrentResults(props: CurrentResultsProps) {
 			</div>
 		</div>
 	);
+}
+
+function InstallBtn() {
+	return <pwa-install />;
 }
 
 export interface CurrentResultsProps {
