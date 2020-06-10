@@ -49,7 +49,12 @@
 	"background_color": "#171a21",
 	"url": "https://pizza-pi.netlify.app/",
 	"lang": "English",
-	"screenshots": [],
+	"screenshots": [
+		"images/screenshots/Screenshot_1.png",
+		"images/screenshots/Screenshot_2.png",
+		"images/screenshots/Screenshot_3.png",
+		"images/screenshots/Screenshot_1.png"
+	],
 	"description": "Get the most dough for your dough! Calculate price per slice, per square inch and compare your builds to find the best deals.",
 	"orientation": "portrait"
 }
