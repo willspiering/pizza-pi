@@ -33,3 +33,6 @@ pwa-install::part(openButton):hover {
 	background: white;
 	color: #337357;
 }
+:root {
+	--install-button-color: #68b684;
+}
