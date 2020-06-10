@@ -34,6 +34,6 @@ pwa-install::part(openButton):hover {
 	color: #337357;
 }
 
-pwa-install::part(buttonsContainer) button {
+pwa-install::part(installModal) #buttonsContainer button {
 	background: #337357;
 }
