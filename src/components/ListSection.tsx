@@ -125,7 +125,6 @@ const StyledList = styled.div`
 			display: none;
 		}
 		display: flex;
-		/* display: none; */
 		justify-content: center;
 		margin-top: 15px;
 		button {
@@ -143,21 +142,22 @@ const StyledList = styled.div`
 		}
 	}
 	.list-item {
-		flex: 0 0 140px;
-		max-height: 170px;
 		background: white;
-		overflow: hidden;
 		margin: 5px;
 		border-radius: 10px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"main-stats remove-btn"
+			"secondary-stats remove-btn";
 		.main-stats {
-			padding: 10px 15px;
+			grid-area: main-stats;
+
+			padding: 10px 15px 0;
 			display: flex;
 			flex: 1;
-			flex-direction: column;
-			justify-content: center;
+			justify-content: space-between;
 			.label {
 				font-size: 0.9em;
 			}
@@ -167,7 +167,8 @@ const StyledList = styled.div`
 			}
 		}
 		.secondary-stats {
-			padding: 10px 5px;
+			grid-area: secondary-stats;
+			padding: 0 15px 10px;
 			display: flex;
 			flex: 1;
 			flex-direction: column;
@@ -185,6 +186,9 @@ const StyledList = styled.div`
 			}
 		}
 		.remove-item-btn {
+			grid-area: remove-btn;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
 			background: none;
 			border: none;
 			outline: none;
