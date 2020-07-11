@@ -61,5 +61,6 @@ const StyledApp = styled.div`
 		height: 704px;
 		border-radius: 20px;
 		overflow: hidden;
+		box-shadow: 3px 4px 20px 2px #333;
 	}
 `;
