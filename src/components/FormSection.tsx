@@ -47,7 +47,7 @@ const StyledForm = styled.div`
 				outline: none;
 				border: none;
 				padding: 10px 20px;
-				font-size: 1.2em;
+				font-size: 1em;
 				&:focus,
 				&:active {
 					outline: none;
