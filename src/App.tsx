@@ -5,6 +5,7 @@ import ListSection from "./components/ListSection";
 import useViewport from "./hooks/useViewport";
 import usePersistedState from "./hooks/usePersistedState";
 import styled from "styled-components";
+import "@pwabuilder/pwaupdate";
 
 interface PizzaBuildState {
 	id: string;
@@ -18,6 +19,10 @@ interface PizzaBuildState {
 	pricePerSlice: number;
 	totalPrice: number;
 }
+
+// function PwaUpdate() {
+// 	return <pwa-update></pwa-update>;
+// }
 
 export default function App() {
 	const [showList, setShowList] = React.useState(false);
@@ -39,6 +44,7 @@ export default function App() {
 
 	return (
 		<StyledApp>
+			<pwa-update></pwa-update>
 			{(!showList || width > mobile) && (
 				<FormSection>
 					<Calculator updateList={addPizzaBuild} toggleList={toggleList} />
