@@ -56,6 +56,7 @@ const StyledApp = styled.div`
 	display: flex;
 	width: 100vw;
 	height: 100vh;
+	min-height: -webkit-fill-available;
 	@media screen and (min-width: 600px) {
 		width: auto;
 		height: 704px;
