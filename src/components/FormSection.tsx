@@ -8,22 +8,25 @@ export default function FormSection({ children }) {
 const StyledForm = styled.div`
 	background: #337357;
 	flex: 1 0 40%;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: auto 1fr;
 	.current-wrapper {
 		position: relative;
 		padding: 20px;
 		color: white;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
+		display: grid;
+		grid-template-rows: 0 76px 76px 76px;
+		grid-template-areas:
+			"pwa-install"
+			"price-per-sq-in"
+			"total-cost"
+			"price-per-slice";
 		.label {
 			font-size: 1.2em;
 		}
 		.result {
 			font-weight: bold;
-			font-size: 2.5em;
+			font-size: 2.3em;
 		}
 	}
 	.form-wrapper {
