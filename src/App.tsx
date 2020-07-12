@@ -44,7 +44,7 @@ export default function App() {
 
 	return (
 		<StyledApp>
-			<pwa-update></pwa-update>
+			<pwa-update swpath="./serviceWorker"></pwa-update>
 			{(!showList || width > mobile) && (
 				<FormSection>
 					<Calculator updateList={addPizzaBuild} toggleList={toggleList} />
