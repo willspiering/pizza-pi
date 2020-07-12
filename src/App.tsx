@@ -20,10 +20,6 @@ interface PizzaBuildState {
 	totalPrice: number;
 }
 
-// function PwaUpdate() {
-// 	return <pwa-update></pwa-update>;
-// }
-
 export default function App() {
 	const [showList, setShowList] = React.useState(false);
 	const [pizzaList, setPizzaList] = usePersistedState<PizzaBuildState[]>([], "PizzaList");
@@ -44,7 +40,7 @@ export default function App() {
 
 	return (
 		<StyledApp>
-			<pwa-update swpath="./serviceworker"></pwa-update>
+			{/* <pwa-update swpath="./serviceworker"></pwa-update> */}
 			{(!showList || width > mobile) && (
 				<FormSection>
 					<Calculator updateList={addPizzaBuild} toggleList={toggleList} />
