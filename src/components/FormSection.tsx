@@ -69,6 +69,7 @@ const StyledForm = styled.div`
 				font-size: 1.2em;
 				padding: 10px 20px;
 				border-radius: 10px;
+				height: 42px;
 				flex: 1;
 				&:hover {
 					opacity: 0.8;
