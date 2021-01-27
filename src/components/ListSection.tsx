@@ -71,7 +71,7 @@ function ListItem(props: ListItemProps) {
 					<div className="value">${props.unitPrice.toFixed(2)}</div>
 				</li>
 				<li className="value-wrapper">
-					<div className="label">Quantiy:</div>
+					<div className="label">Quantity:</div>
 					<div className="value">{props.quantity}</div>
 				</li>
 				<li className="value-wrapper">
