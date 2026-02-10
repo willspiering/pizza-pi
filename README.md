@@ -28,16 +28,16 @@ You can save multiple pizza configurations and compare them side by side. Finall
 
 ## The Tech Stack (For the Nerds)
 
-- React 16 with TypeScript (because I like knowing what type my pizza variables are)
-- Create React App (keeping it simple)
+- React 18 with TypeScript (because I like knowing what type my pizza variables are)
+- Vite (blazingly fast dev server and optimized builds)
 - Styled Components (for that CSS-in-JS goodness)
-- Service Workers (for the offline pizza calculations you never knew you needed)
+- Service Workers via vite-plugin-pwa (for the offline pizza calculations you never knew you needed)
 - PWABuilder web components (`@pwabuilder/pwainstall` & `@pwabuilder/pwaupdate`) for easy app installation
 - LocalStorage API (your browser remembers your pizza preferences)
 
 ## Getting Started
 
-You'll need Node.js (v12 or higher) and either Yarn or npm installed.
+You'll need Node.js (v18 or higher) and either Yarn or npm installed.
 
 ### Installation
 
@@ -55,10 +55,10 @@ yarn install
 ### Running It Locally
 
 ```bash
-yarn start
+yarn dev
 ```
 
-Head to [http://localhost:3000](http://localhost:3000) and start calculating. The page reloads automatically when you make changes, which is nice.
+Head to [http://localhost:3000](http://localhost:3000) and start calculating. Vite's hot module replacement means your changes appear instantly.
 
 ### Building for Production
 
@@ -66,13 +66,14 @@ Head to [http://localhost:3000](http://localhost:3000) and start calculating. Th
 yarn build
 ```
 
-Spits out a production-ready build in the `build` folder.
+Spits out a production-ready build in the `dist` folder. Includes TypeScript type checking before building.
 
 ## Available Scripts
 
-- `yarn start` - Development mode
-- `yarn build` - Production build
-- `yarn test` - Run tests (if you're into that sort of thing)
+- `yarn dev` - Development mode with Vite's blazing fast HMR
+- `yarn build` - Production build with TypeScript type checking
+- `yarn preview` - Preview production build locally
+- `yarn type-check` - Run TypeScript type checking without building
 
 ## Deployment
 
@@ -80,4 +81,4 @@ Currently living at [https://pizza-pi.netlify.app/](https://pizza-pi.netlify.app
 
 ## A Note
 
-Built with Create React App because sometimes the defaults are actually fine.
+Built with Vite because it's 2026 and we deserve nice things like instant HMR and optimized builds.
