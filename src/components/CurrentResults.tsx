@@ -1,4 +1,3 @@
-import * as React from "react";
 import "@pwabuilder/pwainstall";
 
 export default function CurrentResults(props: CurrentResultsProps) {

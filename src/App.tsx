@@ -28,12 +28,12 @@ export default function App() {
 	// TODO: setup good mobile breakpoint
 	const mobile = 600;
 
-	let addPizzaBuild = (newPizzaBuild) => {
-		setPizzaList((pizzaList) => pizzaList.concat(newPizzaBuild));
+	let addPizzaBuild = (newPizzaBuild: PizzaBuildState) => {
+		setPizzaList((pizzaList: PizzaBuildState[]) => pizzaList.concat(newPizzaBuild));
 	};
 
-	let removePizzaBuild = (id) => {
-		setPizzaList((pizzaList) => pizzaList.filter((t) => t.id !== id));
+	let removePizzaBuild = (id: string) => {
+		setPizzaList((pizzaList: PizzaBuildState[]) => pizzaList.filter((t: PizzaBuildState) => t.id !== id));
 	};
 
 	let toggleList = () => setShowList(!showList);

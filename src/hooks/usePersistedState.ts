@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function usePersistedState<T>(defaultValue: T, key: string, storage = window.localStorage) {
 	let [value, setValue] = useState(() => {

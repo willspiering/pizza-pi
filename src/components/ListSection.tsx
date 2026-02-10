@@ -1,8 +1,26 @@
-import * as React from "react";
 import logo from "../assets/pizza-pi-logo.png";
 import styled from "styled-components";
 
-export default function ListSection(props) {
+interface PizzaBuildState {
+	id: string;
+	size: number;
+	unitPrice: number;
+	numberOfPizzas: number;
+	slices: number;
+	areaOfPizza: number;
+	totalArea: number;
+	pricePerSqIn: number;
+	pricePerSlice: number;
+	totalPrice: number;
+}
+
+interface ListSectionProps {
+	list: PizzaBuildState[];
+	removePizzaBuild: (id: string) => void;
+	toggleList: () => void;
+}
+
+export default function ListSection(props: ListSectionProps) {
 	const showPlaceHolder = () => {
 		return (
 			<StyledPlaceholder>
@@ -20,7 +38,7 @@ export default function ListSection(props) {
 	};
 	const renderListItems = () => {
 		console.log("props", props);
-		return props.list.map((item) => {
+		return props.list.map((item: PizzaBuildState) => {
 			return (
 				<ListItem
 					key={item.id}

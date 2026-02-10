@@ -1,9 +1,27 @@
-import * as React from "react";
+import { useState } from "react";
 import CurrentResults from "./CurrentResults";
+
+interface PizzaBuildState {
+	id: string;
+	size: number;
+	unitPrice: number;
+	numberOfPizzas: number;
+	slices: number;
+	areaOfPizza: number;
+	totalArea: number;
+	pricePerSqIn: number;
+	pricePerSlice: number;
+	totalPrice: number;
+}
+
+interface CalculatorProps {
+	updateList: (build: PizzaBuildState) => void;
+	toggleList: () => void;
+}
 
 // Pizza Utilities
 //area of 1 pizza in sq.in
-const areaOfPizza = diameter => {
+const areaOfPizza = (diameter: number): number => {
   let radius = diameter / 2;
   let pi = 3.14;
   let area = pi * (radius * radius);
@@ -11,42 +29,42 @@ const areaOfPizza = diameter => {
 };
 
 //area of total pizza count
-const totalPizzaArea = (size, numberOfPizzas) => {
+const totalPizzaArea = (size: number, numberOfPizzas: number): number => {
   return areaOfPizza(size) * numberOfPizzas;
 };
 //price per sq inch
-const pricePerSqIn = (unitPrice, totalPizzaArea, numberOfPizzas) => {
+const pricePerSqIn = (unitPrice: number, totalPizzaArea: number, numberOfPizzas: number): number => {
   return (unitPrice * numberOfPizzas) / totalPizzaArea;
 };
 //price per slice
-const pricePerSlice = (unitPrice, slicesPerPizza) => {
+const pricePerSlice = (unitPrice: number, slicesPerPizza: number): number => {
   return unitPrice / slicesPerPizza;
 };
 // total cost
-const totalPrice = (unitPrice, numberOfPizzas) => {
+const totalPrice = (unitPrice: number, numberOfPizzas: number): number => {
   return unitPrice * numberOfPizzas;
 };
 
-export default function Calculator(props) {
-  const [pizzaSize, setPizzaSize] = React.useState(18);
-  const [pizzaPrice, setPizzaPrice] = React.useState(0);
-  const [pizzaQuantity, setPizzaQuantity] = React.useState(1);
-  const [pizzaSlices, setPizzaSlices] = React.useState(6);
+export default function Calculator(props: CalculatorProps) {
+  const [pizzaSize, setPizzaSize] = useState(18);
+  const [pizzaPrice, setPizzaPrice] = useState(0);
+  const [pizzaQuantity, setPizzaQuantity] = useState(1);
+  const [pizzaSlices, setPizzaSlices] = useState(6);
 
-  const handleSize = e => {
-    setPizzaSize(e);
+  const handleSize = (e: string) => {
+    setPizzaSize(Number(e));
   };
 
-  const handlePrice = e => {
-    setPizzaPrice(e);
+  const handlePrice = (e: string) => {
+    setPizzaPrice(Number(e));
   };
 
-  const handleQuantity = e => {
-    setPizzaQuantity(e);
+  const handleQuantity = (e: string) => {
+    setPizzaQuantity(Number(e));
   };
 
-  const handleSlices = e => {
-    setPizzaSlices(e);
+  const handleSlices = (e: string) => {
+    setPizzaSlices(Number(e));
   };
 
   function generateId() {
@@ -81,7 +99,7 @@ export default function Calculator(props) {
     props.updateList(newBuild);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
   };
 

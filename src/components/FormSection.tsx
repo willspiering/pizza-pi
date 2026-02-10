@@ -1,7 +1,6 @@
-import * as React from "react";
 import styled from "styled-components";
 
-export default function FormSection({ children }) {
+export default function FormSection({ children }: { children: React.ReactNode }) {
 	return <StyledForm>{children}</StyledForm>;
 }
 
